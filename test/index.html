@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<script src="../dist/browserdb.js"></script>
+<script>
+var user = browserdb.schema({
+  id: 'number',
+  name: 'string',
+  email: 'string',
+  age: 'number',
+}, {
+  keyPath: 'id',
+  unique: true,
+  timestamps: true,
+});
+browserdb.use('demo', 1).store('users', user).open().then(function(db) {
+  db.put({
+    id: 4,
+    name: 'foobar',
+    email: 'foo@bar.com',
+    age: 7
+  });
+});
+</script>
+</html>

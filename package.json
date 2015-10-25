@@ -1,0 +1,29 @@
+{
+  "name": "browserdb",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "jsnext:main": "lib/index.js",
+  "browser": "dist/browserdb.js",
+  "scripts": {
+    "lint": "eslint lib/**; exit 0",
+    "test": "hihat --index=test/index.html",
+    "build": "rollupbabel --name=browserdb --useStrict=true --format=iife --input=lib/index.js | uglifyjs -nm -o dist/browserdb.js"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.3",
+    "babelify": "^6.3.0",
+    "eslint": "^1.7.1",
+    "eslint-config-airbnb": "^0.1.0",
+    "lodash": "^3.10.1",
+    "lodash-es": "^3.10.1",
+    "rollup-babel": "^0.6.1",
+    "tap-dev-tool": "^1.3.0",
+    "tape": "^4.2.1",
+    "uglifyjs": "^2.4.10"
+  },
+  "dependencies": {
+    "babel-plugin-lodash": "^0.2.0",
+    "babel-plugin-version-inline": "0.0.1",
+    "lodash": "^3.10.1"
+  }
+}

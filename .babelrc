@@ -1,0 +1,8 @@
+{
+  "compact": true,
+  "stage": 1,
+  "plugins": [
+    "version-inline",
+    "lodash"
+  ]
+}
